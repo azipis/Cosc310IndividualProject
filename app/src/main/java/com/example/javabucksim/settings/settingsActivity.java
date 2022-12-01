@@ -32,6 +32,7 @@ public class settingsActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     Button back;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

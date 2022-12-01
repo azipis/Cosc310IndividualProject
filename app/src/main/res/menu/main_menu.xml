@@ -15,6 +15,12 @@
             android:icon="@drawable/product_icon"
             android:title="View Items" />
         <item
+            android:id="@+id/nav_view_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="?attr/actionModePasteDrawable"
+            android:title="View Stock" />
+        <item
             android:id="@+id/nav_veiw_report"
             android:icon="@drawable/report_icon"
             android:title="View Report" />

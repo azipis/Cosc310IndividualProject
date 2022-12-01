@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class autoOrder extends AppCompatActivity {
+
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private FirebaseAuth mFirebaseAuth;
     RecyclerView recyclerView;
@@ -37,6 +38,7 @@ public class autoOrder extends AppCompatActivity {
     int[] productNum = new int[18];
     String[] productName = {"chai", "blondeRoast", "capp", "coffee", "coldbrew", "cups", "darkRoast", "flavour", "juice", "latte", "lids",
             "matcha", "mediumRoast", "milk", "sleeves", "stoppers", "sugar", "tea"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,12 +65,13 @@ public class autoOrder extends AppCompatActivity {
         ArrayList<String> quantString = new ArrayList<>();
         //lowStackWarning();
         for (int i = 0; i < productNum.length; i++) {
-            if (productNum[i] < 50)
-            {
+            if (productNum[i] < 50) {
                 //lowitems.add("test");
                 lowitems.add(productName[i]);
-                quant.add(productNum[i]+100);
-            }}
+                quant.add((productNum[i]) + 150);
+            }
+
+        }
         //lowitems.add("test");
         //String[] itemquantities = {"300"};// when an item is low calculate the diference between max and current for all items and if it is less than 25% order the approprate ammount of that item
         for(int i=0;i<quant.size();i++)
@@ -78,8 +81,8 @@ public class autoOrder extends AppCompatActivity {
         //for each low item create a tile for how much needs to be ordered.
         for(int i =0; i< lowitems.size();i++)
         {
-            orderItems.add(new orderTile(lowitems.get(i),"100"));
-            map.put(lowitems.get(i),"100");
+            orderItems.add(new orderTile(lowitems.get(i),"150"));
+            map.put(lowitems.get(i),quant.get(i).toString());
         }
     }
     public void conf(View view)
@@ -131,6 +134,7 @@ public class autoOrder extends AppCompatActivity {
                 productNum[17] = Integer.parseInt(value.getString(productName[17]));
 
                 setUpOrder();
+
             }
         });
     }
