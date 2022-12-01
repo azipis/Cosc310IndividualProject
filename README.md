@@ -80,3 +80,17 @@ Classes are organized in the java folder of the app project. These classes are t
 
 Tests can be found here: https://github.com/azipis/Cosc310A3Testing/tree/main/app/src/androidTest/java/com/example/javabucksim
 
+---
+
+## Features Added for Assignment 4 (Individual Project)
+
+1. In App messaging (Firebase API)
+    - Allows for the sending of In-App messages to all users. It is currently being used to inform employees that they need to check that there is enough stock for the week. However, this could be used to share any reminders that Management or Admins would want users to see.
+    - <https://firebase.google.com/docs/in-app-messaging/get-started?platform=android>
+1. Using up items (NumberPicker API)
+    - When an item is bought by a client, employees now have the option of selecting the amount of items bought, and the inventory of individual components of that item are decreased. Previous to this, there was no way in app to decrease stock from the database.
+    - <https://github.com/reduouo/Increase-Decrease-Button>
+1. Graph displaying remaining stock (MPAndroidChart API)
+    - New activity showing every item in the database along with the amount of stock remaining displayed as a bar chart. Since each bar is clickable, a future implementation could be directly linking you to the store / website of the item that needs reordering.
+    - <https://github.com/PhilJay/MPAndroidChart>
+

@@ -193,4 +193,11 @@ public class Item extends AppCompatActivity {
         });
 
     }
+
+    public void submit(View view){
+
+        finish();
+
+    }
+
 }
