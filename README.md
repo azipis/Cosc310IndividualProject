@@ -1,6 +1,12 @@
-# Cosc 310 Assignment 3
+# Cosc 310 Individual Project
+
+Andrei Zipis
+
+29957115
 
 The project is an Android app designed for Coffee shops to help manage their business. The app tracks inventory and sales information to help managers with their daily tasks and provide them with reports to make business decisions.
+
+Repo Location: <https://github.com/azipis/Cosc310IndividualProject>
 
 ---
 
